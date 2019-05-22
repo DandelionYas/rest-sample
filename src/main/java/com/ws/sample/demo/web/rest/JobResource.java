@@ -2,13 +2,12 @@ package com.ws.sample.demo.web.rest;
 
 
 import com.codahale.metrics.annotation.Timed;
-import com.ws.sample.demo.domain.User;
-import com.ws.sample.demo.web.rest.util.HeaderUtil;
 import com.ws.sample.demo.domain.Job;
+import com.ws.sample.demo.domain.User;
 import com.ws.sample.demo.repository.JobRepository;
 import com.ws.sample.demo.web.rest.errors.BadRequestAlertException;
+import com.ws.sample.demo.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -72,8 +70,7 @@ public class JobResource {
      */
     @PostMapping("/login")
     public String getToken(@RequestBody User user) throws URISyntaxException {
-        String accessToken = "";
-
+        String accessToken = "sample access token.";
         return accessToken;
     }
 
